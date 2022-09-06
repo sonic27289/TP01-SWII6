@@ -25,6 +25,7 @@ namespace TrabalhoPratico01
       this.Rotas.Add("/livro/ToString", controladoraLivro.ToStringResultado);
       this.Rotas.Add("/livro/NomesAutores", controladoraLivro.NomesAutores);
       this.Rotas.Add("/livro/ApresentarLivro", controladoraLivro.ApresentarLivro);
+      this.Rotas.Add("/livro/Creditos", controladoraLivro.ApresentarLivro);
     }
 
     public Task Roteamento(HttpContext httpContext)

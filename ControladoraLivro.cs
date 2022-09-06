@@ -38,8 +38,21 @@ namespace TrabalhoPratico01
       return httpContext.Response.WriteAsync(html);
     }
 
-    public Task ToStringResultado(HttpContext httpContext)
+    public Task Creditos(HttpContext httpContext)
     {
+        Livro livro = this.Livros.First();
+
+        var html = File.ReadAllText(Path.Combine(
+        Directory.GetCurrentDirectory(),
+        "Paginas",
+        "Creditos.html"
+      ));
+
+      return httpContext.Response.WriteAsync(html);
+    }
+
+        public Task ToStringResultado(HttpContext httpContext)
+        {
       Livro livro = this.Livros.First();
 
       var html = File.ReadAllText(Path.Combine(
